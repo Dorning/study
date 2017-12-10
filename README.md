@@ -1,2 +1,0 @@
-# study
-C language learning.
