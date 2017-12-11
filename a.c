@@ -93,7 +93,7 @@ int show(int m) {
 	}
 }
 
-int compare_no(char a, char b) {
+int compare_no(char *a, char *b) {
 	int flag;
 	
 	if(strtol(a, NULL, 0) == strtol(b, NULL, 0)) flag=0;
@@ -134,7 +134,7 @@ struct Stu_info add(int m) {
 /*** functions in the menu ************************************************/
 
 void ins(void) {
-	int i, j, k, sn;
+	int i, j, k, sn, main(void);
 	struct Stu_info z;
 	system("clear");
 	
@@ -197,17 +197,17 @@ void ovr(int m) {
 	main();
 }
 
-/*
-void srch(char s, int a, int f) {
+
+void srch(char *p, int a, int f) {
 	int i, flag[N]={0};
-	if(s!='\0') {
-		switch(f)
+	if(p!='\0') {
+		switch(f){;}
 		
 		for(i=0;i<n;i++)
-			if(s==stu[i].no)
+			if(p==stu[i].no)
 				flag[i]=1;
 	}
-	if(s.name!='*') {
+	if(p.name!='*') {
 		for(i=0;i<n;i++)
 			if(s.no==stu[i].no)
 				flag[i]=1;
@@ -218,17 +218,17 @@ void srch(char s, int a, int f) {
 	
 	main();
 }
-*/
+
 
 /*** main function ********************************************************/
 
 int init_info() {
-	if(i) {
-		
+	if(1) {
+			/* if file could open */
 		
 		
 		return 0;
-	}	//import();		/* and you can import data from an existing file */
+	}				//import();		/* and you can import data from an existing file */
 	else {
 		ins(); return 0;			/* then input by hand */
 	}
@@ -257,7 +257,7 @@ int main(void) {
 	
 	switch(i) {
 		case 1 : ins(); break;
-		case 2 : del(); break;
+		case 2 : del(srch()); break;
 		case 3 : ovr(); break;
 		case 4 : srch(); break;
 		default: printf("\t\t\t\t# Never Mind! \n");
