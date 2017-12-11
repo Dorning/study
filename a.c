@@ -164,8 +164,8 @@ void ins(void) {
 	/* inserting finished. write over to a file. */
 	
 	system("clear");
-	printf("\t\t\t\t# Data Get!");
-	printf("\t\t\t\t# Export the data? y/n >>");
+	printf("\t\t# Data Get!");
+	printf("\t\t# Export the data? y/n >>");
 	i=input_bool();
 	
 	if(i) { /* then export the data */
@@ -183,7 +183,7 @@ void ins(void) {
 }
 
 void del(int m) {
-	int i;
+	int i, main(void);
 	for(i=m-1;i<n;i++) {
 		stu[i]=stu[i+1];
 	}
@@ -191,30 +191,32 @@ void del(int m) {
 }
 
 void ovr(int m) {
+	int main(void);
 	system("clear");
 	printf("Enter Corrected Mseeages:\n");
 	stu[m]=add(m);
 	main();
 }
 
-
+/*
 void srch(char *p, int a, int f) {
-	int i, flag[N]={0};
-	if(p!='\0') {
+									// p is a char pointer
+	int i, flag[N]={0}, main(void);
+	if(*p!='\0') {
 		switch(f){;}
 		
 		for(i=0;i<n;i++)
 			if(p==stu[i].no)
 				flag[i]=1;
 	}
-	if(p.name!='*') {
+	if(1) {
 		for(i=0;i<n;i++)
-			if(s.no==stu[i].no)
+			if(*p.no==stu[i].no)
 				flag[i]=1;
 	}
 	
 	for(i=0;i<n;i++)
-		if(flag[i]) show(stu[i]);
+		if(flag[i]) show(i);
 	
 	main();
 }
@@ -243,26 +245,26 @@ int main(void) {
 	}
 	
 	system("clear");
-	printf("\n\n\n\n\n\n\n");
-	printf("\t\t\t\t************************************************\n");
-	printf("\t\t\t\t*                    Menu                     *\n");
-	printf("\t\t\t\t*                #1. add                       *\n");
-	printf("\t\t\t\t*                #2. delete                    *\n");
-	printf("\t\t\t\t*                #3. write                     *\n");
-	printf("\t\t\t\t*                #4. search                    *\n");
-	printf("\t\t\t\t*                #5. exit                      *\n");
-	printf("\t\t\t\t************************************************\n");
-	printf("\t\t\t\t# What would you like to do? >>\n");
+	printf("\n\n\n\n\n\n");
+	printf("\t\t************************************************\n");
+	printf("\t\t*                    Menu                      *\n");
+	printf("\t\t*                #1. add                       *\n");
+	printf("\t\t*                #2. delete                    *\n");
+	printf("\t\t*                #3. write                     *\n");
+	printf("\t\t*                #4. search                    *\n");
+	printf("\t\t*                #5. exit                      *\n");
+	printf("\t\t************************************************\n");
+	printf("\t\t# What would you like to do? >>");
 	i = input_num(1, 5);
 	
 	switch(i) {
-		case 1 : ins(); break;
-		case 2 : del(srch()); break;
-		case 3 : ovr(); break;
-		case 4 : srch(); break;
-		default: printf("\t\t\t\t# Never Mind! \n");
+		case 1 : //ins(); break;
+		case 2 : //del(srch()); break;
+		case 3 : //ovr(); break;
+		case 4 : //srch(); break;
+		default: printf("\t\t# Never Mind! \n");
 	}
-	system("pause");
+	
 	exit(0);
 }
 
